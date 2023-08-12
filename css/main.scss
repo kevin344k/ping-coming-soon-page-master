@@ -1,0 +1,235 @@
+//# Front-end Style Guide
+
+//## Layout
+
+//The designs were created to the following widths:
+
+//- Mobile: 375px
+//- Desktop: 1440px
+
+//## Colors
+
+//### Primary
+
+$Blue: hsl(223, 87%, 63%);
+
+//### Secondary
+
+$Pale_Blue: hsl(223, 100%, 88%);
+$Light_Red: hsl(354, 100%, 66%);
+
+//### Neutral
+
+$Gray: hsl(0, 0%, 59%);
+$Very_Dark_Blue: hsl(209, 33%, 12%);
+
+//## Typography
+
+//### Body Copy
+
+$Font_size: 1.8rem;
+$font_famili_franklin: 'Libre Franklin', sans-serif;
+//### Fonts
+
+//$Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin);
+//- Weights: 300, 600, 700
+//
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width:100vw;
+    height: auto;
+
+
+    font-size: $Font_size;
+    font-family: $font_famili_franklin;
+
+    header {
+        text-align: center;
+        padding: 10px;
+        width: 330px;
+        margin: auto;
+        margin-top: 50px;
+        h1 {
+            color: $Very_Dark_Blue;
+
+            span {
+                color: $Blue;
+            }
+
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: $Gray;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+
+        span {
+            color: $Very_Dark_Blue;
+            font-weight: 700;
+        }
+    }
+
+    p {
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+}
+
+main {
+    width: 330px;
+    max-width: 400px;
+    margin: auto;
+    form {
+        margin: 40px 0px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+     div{
+        input {
+            outline: none;
+            border: 1px solid $Pale_Blue;
+            padding: 15px 40px;
+            width: 100%;
+            border-radius: 25px;
+            margin-bottom: 5px;
+            &::placeholder {
+                color: $Pale_Blue;
+            }
+        
+        }
+        .error{
+            border: 1px solid $Light_Red;
+            transition: .2s ease-out;
+        }
+        .text_error{
+           display: none;
+           transition: .2s ease-out;
+            font-size: 1.3rem;
+          
+            font-weight: 500;
+            font-style: italic;
+            color: $Light_Red;
+            text-align: center
+        }
+     }
+        button {
+            outline: none;
+            border: 1px solid $Pale_Blue;
+            padding: 15px 40px;
+            width: 100%;
+            border-radius: 25px;
+            margin-bottom: 5px;
+            margin-top: 20px;
+            background-color: $Blue;
+            border: none;
+            color: white;
+            font-weight: 600;
+            box-shadow: -1px 11px 13px 2px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        }
+    }
+    div {
+        width: 100%;
+
+        img {
+            width: 100%;
+            background-position: center;
+            margin-bottom:150px;
+        }
+    }
+}
+
+footer {
+
+    width: 330px;
+    margin: auto;
+    margin-bottom: 30px;
+    div {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+
+       .ico{
+        width: 30px;
+        height: 30px;
+        padding: 7px;
+        border: 1px solid $Pale_Blue;
+        border-radius: 100%;
+
+
+        :nth-child(1){
+            height: 18px;
+            path{
+                fill: $Blue;
+            }
+        }
+
+        &:hover{
+            background-color: $Blue;
+            cursor: pointer;
+            :nth-child(1){
+                height: 18px;
+                path{
+                    fill: white;
+                }
+            }
+        }
+
+       } 
+
+
+    }
+    p{
+        margin-top: 10px;
+        font-size: 1.3rem;
+        color: $Gray;
+    }
+    text-align: center;
+}
+
+@media(min-width:1440px){
+body{
+    header{
+        width: 700px;
+    }
+    main{
+        width: 700px;
+        max-width: 1000px;
+        form{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: first baseline;
+            div{
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                input{
+                    width: 450px;
+                }
+                .text_error{
+                    text-align: left;
+                    margin-left: 40px;
+                }
+              
+            }
+            button{
+                width: 200px;
+            }
+        }
+    }
+}
+}

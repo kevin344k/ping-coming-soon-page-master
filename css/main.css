@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  font-size: 1.8rem;
+  font-family: "Libre Franklin", sans-serif;
+}
+body header {
+  text-align: center;
+  padding: 10px;
+  width: 330px;
+  margin: auto;
+  margin-top: 50px;
+}
+body header h1 {
+  color: hsl(209, 33%, 12%);
+  margin-bottom: 40px;
+}
+body header h1 span {
+  color: hsl(223, 87%, 63%);
+}
+body header h2 {
+  color: hsl(0, 0%, 59%);
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+body header span {
+  color: hsl(209, 33%, 12%);
+  font-weight: 700;
+}
+body p {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+main {
+  width: 330px;
+  max-width: 400px;
+  margin: auto;
+}
+main form {
+  margin: 40px 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+main form div input {
+  outline: none;
+  border: 1px solid hsl(223, 100%, 88%);
+  padding: 15px 40px;
+  width: 100%;
+  border-radius: 25px;
+  margin-bottom: 5px;
+}
+main form div input::-moz-placeholder {
+  color: hsl(223, 100%, 88%);
+}
+main form div input::placeholder {
+  color: hsl(223, 100%, 88%);
+}
+main form div .error {
+  border: 1px solid hsl(354, 100%, 66%);
+  transition: 0.2s ease-out;
+}
+main form div .text_error {
+  display: none;
+  transition: 0.2s ease-out;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-style: italic;
+  color: hsl(354, 100%, 66%);
+  text-align: center;
+}
+main form button {
+  outline: none;
+  border: 1px solid hsl(223, 100%, 88%);
+  padding: 15px 40px;
+  width: 100%;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  background-color: hsl(223, 87%, 63%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  box-shadow: -1px 11px 13px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+main div {
+  width: 100%;
+}
+main div img {
+  width: 100%;
+  background-position: center;
+  margin-bottom: 150px;
+}
+
+footer {
+  width: 330px;
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+footer div {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+footer div .ico {
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 100%;
+}
+footer div .ico :nth-child(1) {
+  height: 18px;
+}
+footer div .ico :nth-child(1) path {
+  fill: hsl(223, 87%, 63%);
+}
+footer div .ico:hover {
+  background-color: hsl(223, 87%, 63%);
+  cursor: pointer;
+}
+footer div .ico:hover :nth-child(1) {
+  height: 18px;
+}
+footer div .ico:hover :nth-child(1) path {
+  fill: white;
+}
+footer p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 59%);
+}
+
+@media (min-width: 1440px) {
+  body header {
+    width: 700px;
+  }
+  body main {
+    width: 700px;
+    max-width: 1000px;
+  }
+  body main form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: first baseline;
+  }
+  body main form div {
+    display: flex;
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body main form div input {
+    width: 450px;
+  }
+  body main form div .text_error {
+    text-align: left;
+    margin-left: 40px;
+  }
+  body main form button {
+    width: 200px;
+  }
+}/*# sourceMappingURL=main.css.map */
